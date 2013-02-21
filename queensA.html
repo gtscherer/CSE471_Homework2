@@ -1,0 +1,7 @@
+num(1..n).
+
+1 {q(I,J): num(J)} 1:-num(I).
+:- q(I,J), q(I1,J), I<I1.
+:- q(I,J), q(I1,J1), I<I1, I1-I==#abs(J1-J).
+:- not q(1,1).
+

@@ -1,0 +1,9 @@
+% File 'shur'
+
+number(1..n).
+#domain number(X).
+#domain number(Y).
+
+subset(1..k).
+1{a(I,X) : subset(I)}1.
+:- a(I,X), a(I,Y), a(I,X+Y), subset(I), X+Y<=n.
